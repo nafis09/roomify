@@ -148,14 +148,6 @@ const VisualizerId = () => {
                                     <Download className="w-4 h-4 mr-2" /> Export
                                 </Button>
 
-                                <Button
-                                    size="sm"
-                                    onClick={() => {}}
-                                    className="share"
-                                    disabled={!currentImage}
-                                >
-                                    <Share2 className="w-4 h-4 mr-2" /> Share
-                                </Button>
                             </div>
                         </div>
 
@@ -206,7 +198,7 @@ const VisualizerId = () => {
                                         <ReactCompareSliderImage src={project?.sourceImage} alt="before" className="compare-img" />
                                     }
                                     itemTwo={
-                                        <ReactCompareSliderImage src={currentImage || project?.renderedImage} alt="after"
+                                        <ReactCompareSliderImage src={currentImage ?? project?.renderedImage ?? undefined} alt="after"
                                         className="compare-img" />
                                     }
                                 />
